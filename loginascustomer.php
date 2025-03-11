@@ -63,16 +63,16 @@ class LoginAsCustomer extends Module
         if (!Validate::isLoadedObject($customer)) {
             return;
         }
-        return '<div class="col-md-3">
+        return '<div class="col-md-6">
                 <div class="card">
                   <h3 class="card-header">
-                    <i class="material-icons">lock_outline</i>
-                    ' . $this->l("Login As Customer") . '
+                    <i class="material-icons">login</i>
+                    ' . $this->l("Login as customer") . '
                   </h3>
                   <div class="card-body">
-                    <p class="text-muted text-center">
-                        <a href="' . $link . '" target="_blank" style="text-decoration: none;">
-                            <i class="material-icons d-block">lock_outline</i>' . $this->l("Login As Customer") . '
+                    <p class="text-muted">
+                        <a class="btn btn-primary" href="' . $link . '" target="_blank" style="text-decoration: none;">
+                            ' . $this->l("Login as ") . $customer->firstname . ' ' . $customer->lastname . '
                         </a>
                     </p>
                   </div>
